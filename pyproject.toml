@@ -1,0 +1,26 @@
+[project]
+name = "fractalsurfer"
+version = "0.1.0"
+description = "Interactive fractal exploration program"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "dearpygui>=2.1.1",
+    "imageio[ffmpeg]>=2.37.2",
+    "numba>=0.62.1", # <3.14
+    "numpy>=2.3.5", # >=3.11
+    "pillow>=12.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+# assume Python 3.13, since 3.14 is blocked by numba
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["ALL"]
+
+[project.gui-scripts]
+gui = "main:build_ui"

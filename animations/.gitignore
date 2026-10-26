@@ -1,0 +1,7 @@
+# keep the subfolders, but ignore their contents
+gif/*
+mp4/*
+webm/*
+!gif/.gitkeep
+!mp4/.gitkeep
+!webm/.gitkeep
